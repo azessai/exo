@@ -10,5 +10,9 @@
     "angular"
   ],
   "author": "Azeddine ES SAI",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "3.18.0",
+    "eslint-config-google": "0.7.1"
+  }
 }

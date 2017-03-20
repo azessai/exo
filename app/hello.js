@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-console.log('hello AE');
+console.log('hello AE !!!');
