@@ -1,5 +1,6 @@
 (function() {
 	'use strict';
+
 	var app = angular.module('ors-route', ['ngRoute']);
 
 	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
