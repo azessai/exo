@@ -1,0 +1,22 @@
+menu {
+	display: block;
+}
+
+menu item {
+    display: inline-block;
+}
+menu item a {
+    background-color: hsla(240, 100%, 90%, 1);
+    padding: 10px;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+    margin: 0px 10px;
+    
+}
+menu item a:hover {
+    background-color: hsla(240, 100%, 75%, 1);
+}
+menu item a:active {
+    background-color: hsla(120, 100%, 75%, 1);
+}
