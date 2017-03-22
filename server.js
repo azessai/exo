@@ -3,8 +3,19 @@
 var express = require('express'); // charge ExpressJS
 var serveIndex = require('serve-index');
 
+
 var ws = require('./webservice.js');
 var app = express();
+
+// webpack
+var webpack = require('webpack');
+var webpackConfig = require('./webpack.config.js');
+// webpackConfig.output.path = '/';
+var compiler = webpack(webpackConfig);
+var webpackDevMiddleware = require('webpack-dev-middleware');
+app.use(webpackDevMiddleware(compiler, {
+    // options
+}));
 
 app.use('/ws/', ws);
 

@@ -1,31 +1,34 @@
-(function() {
-	'use strict';
+'use strict';
+var orsRoute = 'ors-route';
+module.exports = orsRoute;
 
-	var app = angular.module('ors-route', ['ngRoute']);
+import 'angular-route';
 
-	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-		$locationProvider
-			.html5Mode(false)
-			.hashPrefix('');
+var app = angular.module(orsRoute, ['ngRoute']);
 
-		$routeProvider
-			.when('/', {
-				templateUrl: 'ors-route/tmpl/home.html'
-			})
-			.when('/product', {
-				templateUrl: 'ors-route/tmpl/product.html',
-				controller: 'ProductCtrl',
-				controllerAs: '$ctrl'
-			})
-			.when('/service', {
-				templateUrl: 'ors-route/tmpl/service.html'
-			})
-			.when('/contact', {
-				templateUrl: 'ors-route/tmpl/contact.html'
-			})
-			.otherwise({
-				redirectTo: '/'
-			});
-	}]);
+import './ctrl/product.js';
 
-})();
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+	$locationProvider
+		.html5Mode(false)
+		.hashPrefix('');
+
+	$routeProvider
+		.when('/', {
+			templateUrl: 'ors-route/tmpl/home.html'
+		})
+		.when('/product', {
+			templateUrl: 'ors-route/tmpl/product.html',
+			controller: 'ProductCtrl',
+			controllerAs: '$ctrl'
+		})
+		.when('/service', {
+			templateUrl: 'ors-route/tmpl/service.html'
+		})
+		.when('/contact', {
+			templateUrl: 'ors-route/tmpl/contact.html'
+		})
+		.otherwise({
+			redirectTo: '/'
+		});
+}]);
